@@ -31,6 +31,23 @@ Postman
 
 No known bugs at this time.
 
+### **Specs**
+
+<br>
+<table>
+  <tr>
+    <th>User Story #</th>
+    <th>Behavior</th>
+    <th>Actualized</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>As a user, I want to click on a malody from a list to see related supplements.</td>
+    <td>False</td>
+  </tr>
+</table>
+<br>
+
 ## 🔌Installation Requirements for React/Redux - Follow First
 
 <details>
