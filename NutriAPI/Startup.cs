@@ -7,9 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using NutriAPI.Helpers;
 using NutriAPI.Models;
-using NutriAPI.Services;
 using System;
 using System.Reflection;
 using System.IO;
@@ -24,29 +22,18 @@ namespace NutriAPI
             Configuration = configuration;
         }
 
-        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
-
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            var appSettingsSection = Configuration.GetSection("AppSettings");
-            services.Configure<AppSettings>(appSettingsSection);
-
-            var appSettings = appSettingsSection.Get<AppSettings>();
-            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
-
-            services.AddScoped<IUserService, UserService>();
-
             services.AddDbContext<NutriAPIContext>(opt =>
                 opt.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddApiVersioning(o => {
                 o.ReportApiVersions = true;
                 o.AssumeDefaultVersionWhenUnspecified = true;
-                o.DefaultApiVersion = new ApiVersion(2, 0);
+                o.DefaultApiVersion = new ApiVersion(1, 0);
                 });
 
             services.AddDbContext<NutriAPIContext>(opt =>
@@ -94,7 +81,7 @@ namespace NutriAPI
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v2/swagger.json", "My API V2");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
             });
 
             // app.UseAuthentication();
