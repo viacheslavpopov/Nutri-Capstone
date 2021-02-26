@@ -13,6 +13,10 @@ A website to search for supplements that are suitable for supporting the health 
 
 ### **Preview**
 
+### **Logo (WIP)**
+
+[![pixlr-bg-result-2.png](https://i.postimg.cc/k4kwW37R/pixlr-bg-result-2.png)](https://postimg.cc/8JmhVYJT)
+
 ### **Component Diagram**
 
 [![Nutri-Diagram.jpg](https://i.postimg.cc/xCm3VZPY/Nutri-Diagram.jpg)](https://postimg.cc/N9gH1pVP)
