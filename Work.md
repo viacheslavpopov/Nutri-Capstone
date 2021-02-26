@@ -1,0 +1,1 @@
+8:00 AM - 11:00 AM: Create README, add license, add proposal, add component diagram, add logo prototype add basic file tree for API and frontend of project.
