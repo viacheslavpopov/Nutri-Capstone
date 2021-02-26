@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Nutree.Models;
+using NutriAPI.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
