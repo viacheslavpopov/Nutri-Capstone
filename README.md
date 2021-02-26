@@ -15,6 +15,8 @@ A website to search for supplements that are suitable for supporting the health 
 
 ### **Component Diagram**
 
+[![Nutri-Diagram.jpg](https://i.postimg.cc/xCm3VZPY/Nutri-Diagram.jpg)](https://postimg.cc/N9gH1pVP)
+
 ### **Technologies Used**
 
 VS Code <br>
