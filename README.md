@@ -1,4 +1,4 @@
-# Nutri (nutree?)
+# Nutri
 
 #### Capstone Project
 #### Created 02.26.2021 | Last Updated 02.26.2021
