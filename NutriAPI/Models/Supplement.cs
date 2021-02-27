@@ -13,5 +13,7 @@ namespace NutriAPI.Models
     public string Dosing { get; set; }
     [Required]
     public string Contraindications { get; set; }
+    [Required]
+    public string Malodies { get; set; }
   }
 }
