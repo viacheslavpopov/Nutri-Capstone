@@ -196,10 +196,11 @@ https://localhost:5000/api/1.0/supplements/1
 ```
 {
     "supplementId": 1,
-    "type": "National Park",
-    "name": "Crater Lake",
-    "dosing": "Crater Lake",
-    "contraindications": "OR"
+    "type": "Herb",
+    "name": "Milk Thistle",
+    "dosing": "According to research, the therapeutic threshold may be around 225mg per day.",
+    "contraindications": "Milk Thistle may lower blood sugar levels in people with type 2 diabetes. Those with allergies to plants in the same family as Milk Thistle (ragweed, marigold, etc.) may experience a reaction.",
+    "maladies": "Liver Health"
 }
 ```
 ----------------------------
@@ -244,11 +245,11 @@ GET /api/1.0/supplements/random
     <td>Returns supplement by name (Milk Thistle, Vitamin D, etc.)</td>
   </tr>
   <tr>
-    <td>malody(or malodies)</td>
+    <td>maladies</td>
     <td>string</td>
     <td>none</td>
     <td>false</td>
-    <td>Returns supplement by malodies associated with it (Diabetes, Heart Health, etc.)</td>
+    <td>Returns supplement by maladies associated with it (Diabetes, Heart Health, etc.)</td>
   </tr>
 </table>
 </details>
@@ -266,7 +267,7 @@ https://localhost:5000/api/1.0/supplements/?type=herb
     "name": "Milk Thistle",
     "dosing": "According to research, the therapeutic threshold may be around 225mg per day.",
     "contraindications": "Milk Thistle may lower blood sugar levels in people with type 2 diabetes. Those with allergies to plants in the same family as Milk Thistle (ragweed, marigold, etc.) may experience a reaction.",
-    "malodies": "Liver Health"
+    "maladies": "Liver Health"
 }
 ```
 
