@@ -43,5 +43,34 @@ namespace NutriAPI.Controllers
       }
       return query.ToList();
     }
+
+    [HttpPost]
+    public void Post([FromBody] Supplement supplement)
+    {
+      _db.Supplements.Add(supplement);
+      _db.SaveChanges();
+    }
+
+    [HttpGet("{id}")]
+    public ActionResult<Supplement> Get(int id)
+    {
+      return _db.Supplements.FirstOrDefault(entry => entry.SupplementId == id);
+    }
+
+    [HttpPut("{id}")]
+    public void Put(int id, [FromBody] Supplement supplement)
+    {
+      supplement.supplementId = id;
+      _db.Entry(supplement).State = EntityState.Modified;
+      _db.SaveChanges();
+    }
+
+    [HttpDelete("{id}")]
+    public void Delete(int id)
+    {
+      var supplementToDelete = _db.Supplements.FirstOrDefault(entry => entry.SupplementID == id);
+      _db.Supplements.Remove(supplementToDelete);
+      _db.SaveChanges();
+    }
   }
 }
