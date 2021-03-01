@@ -60,7 +60,7 @@ namespace NutriAPI.Controllers
     [HttpPut("{id}")]
     public void Put(int id, [FromBody] Supplement supplement)
     {
-      supplement.supplementId = id;
+      supplement.SupplementId = id;
       _db.Entry(supplement).State = EntityState.Modified;
       _db.SaveChanges();
     }
@@ -68,7 +68,7 @@ namespace NutriAPI.Controllers
     [HttpDelete("{id}")]
     public void Delete(int id)
     {
-      var supplementToDelete = _db.Supplements.FirstOrDefault(entry => entry.SupplementID == id);
+      var supplementToDelete = _db.Supplements.FirstOrDefault(entry => entry.SupplementId == id);
       _db.Supplements.Remove(supplementToDelete);
       _db.SaveChanges();
     }
