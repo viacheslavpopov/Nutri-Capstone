@@ -22,7 +22,7 @@ namespace NutriAPI.Controllers
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<Supplement>> Get(string type, string name, string dosing, string contraindications)
+    public ActionResult<IEnumerable<Supplement>> Get(string type, string name, string dosing, string contraindications, string maladies)
     {
       var query = _db.Supplements.AsQueryable();
       if (type != null)
@@ -40,6 +40,10 @@ namespace NutriAPI.Controllers
       if (contraindications != null)
       {
         query = query.Where(entry => entry.Contraindications == contraindications);
+      }
+      if (maladies != null)
+      {
+        query = query.Where(entry => entry.Maladies.Contains(maladies));
       }
       return query.ToList();
     }
