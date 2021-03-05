@@ -35,6 +35,4 @@ const mapStateToProps = state => {
     }
 }
 
-SupplementControl = connect(mapStateToProps)(SupplementControl);
-
-export default SupplementControl;
+export default connect(mapStateToProps)(SupplementControl);
