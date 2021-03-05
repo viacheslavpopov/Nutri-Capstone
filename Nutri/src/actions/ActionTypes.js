@@ -1,0 +1,1 @@
+export const TOGGLE_MAL = 'TOGGLE_MAL';
