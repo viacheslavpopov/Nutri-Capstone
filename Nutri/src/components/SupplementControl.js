@@ -3,6 +3,7 @@ import SupplementDetail from './SupplementDetail';
 import SupplementList from './SupplementList';
 import { connect } from 'prop-types';
 import PropTypes from 'prop-types';
+import { makeApiCall } from './../actions';
 import * as a from './../actions';
 
 class SupplementControl extends React.Component {
@@ -11,16 +12,36 @@ class SupplementControl extends React.Component {
         super(props);
     }
 
+    componentDidMount() {
+        const { dispatch } = this.props;
+        dispatch(makeApiCall());
+    }
+
     render() {
-        return (
-            <>
-            </>
-        );
+
+        const { error, isLoading, suppData } = this.props;
+        if (error) {
+            return <>Error: { error.message }</>
+        } else if (isLoading) {
+            return <>Loading...</>
+        } else {
+            return (
+                <>
+                <h1>Supplements</h1>
+                <ul>
+                    {suppData.map((supplement, index) =>
+                        <li key = {index}>
+                            <p>{supplement[1].name}</p>
+                        </li>
+                    )}
+                </ul>
+                </>
+            );
+        }
     }
 }
 
 SupplementControl.propTypes = {
-    masterSupplementList: PropTypes.object,
     suppListVisibleOnPage: PropTypes.bool,
     malListVisibleOnPage: PropTypes.bool,
     suppDetailsVisibleOnPage: PropTypes.bool
@@ -28,10 +49,12 @@ SupplementControl.propTypes = {
 
 const mapStateToProps = state => {
     return {
-        masterSupplementList: state.masterSupplementList,
         suppListVisibleOnPage: state.suppDetailsVisibleOnPage,
         malListVisibleOnPage: state.malListVisibleOnPage,
-        suppDetailsVisibleOnPage: state.suppDetailsVisibleOnPage
+        suppDetailsVisibleOnPage: state.suppDetailsVisibleOnPage,
+        suppData: state.suppData,
+        isLoading: state.isLoading,
+        error: state.error
     }
 }
 
