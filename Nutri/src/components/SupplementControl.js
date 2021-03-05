@@ -1,10 +1,10 @@
 import React from 'react';
-import SupplementDetail from './SupplementDetail';
-import SupplementList from './SupplementList';
-import { connect } from 'prop-types';
+// import SupplementDetail from './SupplementDetail';
+// import SupplementList from './SupplementList';
+import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { makeApiCall } from './../actions';
-import * as a from './../actions';
+// import * as a from './../actions';
 
 class SupplementControl extends React.Component {
 
@@ -49,9 +49,9 @@ SupplementControl.propTypes = {
 
 const mapStateToProps = state => {
     return {
-        suppListVisibleOnPage: state.suppDetailsVisibleOnPage,
-        malListVisibleOnPage: state.malListVisibleOnPage,
-        suppDetailsVisibleOnPage: state.suppDetailsVisibleOnPage,
+        // suppListVisibleOnPage: state.suppDetailsVisibleOnPage,
+        // malListVisibleOnPage: state.malListVisibleOnPage,
+        // suppDetailsVisibleOnPage: state.suppDetailsVisibleOnPage,
         suppData: state.suppData,
         isLoading: state.isLoading,
         error: state.error
