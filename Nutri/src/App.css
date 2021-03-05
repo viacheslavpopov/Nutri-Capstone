@@ -36,9 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-body {
-  background-image: url('./img/taps.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-}
