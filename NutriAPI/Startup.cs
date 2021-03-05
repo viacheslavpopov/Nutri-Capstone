@@ -54,11 +54,6 @@ namespace NutriAPI
                         Name = "Chelsea Becker",
                         Email = "chelraebecker@gmail.com",
                         Url = new Uri("https://github.com/cschweig2/Nutri-Capstone"),
-                    },
-                    License = new OpenApiLicense
-                    {
-                        Name = "Use under LICX",
-                        Url = new Uri("https://example.com/license"),
                     }
                 });
             });
