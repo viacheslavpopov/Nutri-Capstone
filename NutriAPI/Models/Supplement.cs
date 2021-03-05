@@ -14,6 +14,6 @@ namespace NutriAPI.Models
     [Required]
     public string Contraindications { get; set; }
     [Required]
-    public string Malodies { get; set; }
+    public string Maladies { get; set; }
   }
 }
