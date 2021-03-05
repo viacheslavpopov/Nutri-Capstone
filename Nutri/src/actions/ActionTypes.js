@@ -1,1 +1,3 @@
 export const TOGGLE_MAL = 'TOGGLE_MAL';
+export const TOGGLE_DETAILS = 'TOGGLE_DETAILS';
+export const TOGGLE_SUP_LIST = 'TOGGLE_SUP_LIST';
