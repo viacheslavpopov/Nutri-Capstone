@@ -33,7 +33,7 @@ export const makeApiCall = () => {
             .then(response => response.json())
             .then(
                 (jsonifiedResponse) => {
-                    dispatch(getSuppSuccess)(jsonifiedResponse);
+                    dispatch(getSuppSuccess(jsonifiedResponse));
                 })
             .catch((error) => {
                 dispatch(getSuppFailure(error));
