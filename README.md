@@ -170,7 +170,16 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## 📄API Documentation
 
-Use Postman (see Installation Requirements section above) to explore API endpoints.
+Use Postman (see Installation Requirements section above) or Swagger (see below) to explore API endpoints.
+
+### Swagger Documentation
+Explore the API endpoints with Swagger Documentation:
+1. Enter `dotnet run` in the command line to launch the server.
+2. Use a browser to navigate to `http://localhost:5000/swagger/`.
+
+### CORS (Cross Origin Resource Sharing)
+
+This API is CORS enabled. CORS is a W3C standard that allows a server to relax the same-origin policy. This is **not** a security feature, CORS relaxes security. For more information, click [here](https://docs.microsoft.com/en-us/aspnet/core/security/cors?view=aspnetcore-2.2#how-cors).
 
 -------------------------------------------------------
 
