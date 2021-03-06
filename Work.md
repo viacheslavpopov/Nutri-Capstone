@@ -7,3 +7,5 @@
 Notes:
 Additional Resources section can guide users to other websites with more in-depth information about nutrients not included in database.
 Add'l Resources - Linus Pauling, Dr. Axe, HealthLine... 
+
+**Need to figure out store situation.. suppData is nested in the databaseReducer and need it to be separated or need to find a way to access it
