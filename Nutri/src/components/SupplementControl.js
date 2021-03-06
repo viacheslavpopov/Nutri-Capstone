@@ -16,13 +16,13 @@ class SupplementControl extends React.Component {
         const { dispatch } = this.props;
         dispatch(makeApiCall());
     }
-
+        // suppData is undefined
     render() {
 
-        const { error, isLoading, suppData } = this.props;
+        const { error, isLoading, suppList:suppData } = this.props;
         if (error) {
             return <>Error: { error.message }</>
-        } else if (isLoading) {
+        } else if (isLoading || !suppData) {
             return <>Loading...</>
         } else {
             return (
@@ -31,7 +31,7 @@ class SupplementControl extends React.Component {
                 <ul>
                     {suppData.map((supplement, index) =>
                         <li key = {index}>
-                            <p>{supplement[1].name}</p>
+                            <p>{supplement[0].name}</p>
                         </li>
                     )}
                 </ul>
@@ -44,7 +44,10 @@ class SupplementControl extends React.Component {
 SupplementControl.propTypes = {
     suppListVisibleOnPage: PropTypes.bool,
     malListVisibleOnPage: PropTypes.bool,
-    suppDetailsVisibleOnPage: PropTypes.bool
+    suppDetailsVisibleOnPage: PropTypes.bool,
+    suppData: PropTypes.array,
+    isLoading: PropTypes.bool,
+    error: PropTypes.string
 }
 
 const mapStateToProps = state => {
