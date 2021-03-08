@@ -40,10 +40,10 @@ class SupplementControl extends React.Component {
         const { error } = this.props;
         if (error) {
             return <>Error: {error.message}</>
-        } else if (this.props.malListVisibleOnPage) {
-            currentVisibleState = <MaladyList onSelectMalady = {this.handleSelectMalady} />;
         } else if (this.props.suppListVisibleOnPage) {
             currentVisibleState = <SupplementList />
+        } else {
+            currentVisibleState = <MaladyList onSelectMalady = {this.handleSelectMalady} />;
         }
         return (
             <>
