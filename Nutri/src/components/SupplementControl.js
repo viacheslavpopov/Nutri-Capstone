@@ -19,7 +19,7 @@ class SupplementControl extends React.Component {
         // suppData is undefined
     render() {
 
-        const { error, isLoading, suppList:suppData } = this.props;
+        const { error, isLoading, suppData} = this.props;
         if (error) {
             return <>Error: { error.message }</>
         } else if (isLoading || !suppData) {
@@ -31,7 +31,7 @@ class SupplementControl extends React.Component {
                 <ul>
                     {suppData.map((supplement, index) =>
                         <li key = {index}>
-                            <p>{supplement[0].name}</p>
+                            <p>{supplement.name}</p>
                         </li>
                     )}
                 </ul>
