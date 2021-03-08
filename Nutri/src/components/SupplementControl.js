@@ -16,11 +16,23 @@ class SupplementControl extends React.Component {
     // }
         // suppData is undefined
 
+    // handleToggleLists = () => {
+    //     const { dispatch } = this.props;
+    //     const action = a.toggleMal;
+    //     const action2 = a.toggleSuppList;
+    //     dispatch(action);
+    //     console.log("hello");
+    //     dispatch(action2);
+    // }
+    // API call first in one function, trigger other state changes in next function? 
     handleSelectMalady = (maladyType) => {
         const { dispatch } = this.props;
-        dispatch(a.toggleMal);
+        console.log("hello");
+        const action = a.toggleMal;
+        const action2 = a.toggleSuppList;
+        dispatch(action);
+        dispatch(action2);
         dispatch(makeApiCall(maladyType));
-        dispatch(a.toggleSuppList);
     }
 
     render() {
@@ -44,7 +56,6 @@ class SupplementControl extends React.Component {
 SupplementControl.propTypes = {
     suppListVisibleOnPage: PropTypes.bool,
     malListVisibleOnPage: PropTypes.bool,
-    suppDetailsVisibleOnPage: PropTypes.bool,
     suppData: PropTypes.array,
     isLoading: PropTypes.bool,
     error: PropTypes.string
@@ -52,9 +63,8 @@ SupplementControl.propTypes = {
 
 const mapStateToProps = state => {
     return {
-        suppListVisibleOnPage: state.suppDetailsVisibleOnPage,
+        suppListVisibleOnPage: state.suppListVisibleOnPage,
         malListVisibleOnPage: state.malListVisibleOnPage,
-        suppDetailsVisibleOnPage: state.suppDetailsVisibleOnPage,
         suppData: state.suppData,
         isLoading: state.isLoading,
         error: state.error
