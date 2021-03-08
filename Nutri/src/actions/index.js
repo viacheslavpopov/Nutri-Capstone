@@ -8,8 +8,8 @@ export const toggleDetails = () => ({
     type: c.TOGGLE_DETAILS
 });
 
-export const toggleSupList = () => ({
-    type: c.TOGGLE_SUP_LIST
+export const toggleSuppList = () => ({
+    type: c.TOGGLE_SUPP_LIST
 });
 
 export const requestSupplements = () => ({
@@ -26,10 +26,10 @@ export const getSuppFailure = (error) => ({
     error
 });
 
-export const makeApiCall = () => {
+export const makeApiCall = (maladyType) => {
     return dispatch => {
         dispatch(requestSupplements);
-        return fetch(`http://localhost:5000/api/supplements/`) // ${malady} to search by malady clicked by user
+        return fetch(`http://localhost:5000/api/supplements/?maladies=${maladyType}`) // ${malady} to search by malady clicked by user
             .then(response => response.json())
             .then(
                 (jsonifiedResponse) => {
