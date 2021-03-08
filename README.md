@@ -9,7 +9,7 @@
 
 ### **Description**
 
-A website to search for supplements that are suitable for supporting the health of people with certain malodies. This project consists of a React/Redux frontend with a backend which communicates with C# API.
+A website to search for supplements that are suitable for supporting the health of people with certain malodies. Nutri is short for 'nutrients'. This project consists of a React/Redux frontend with a backend which communicates with C# API.
 
 ### **Preview**
 
