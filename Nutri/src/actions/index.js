@@ -34,9 +34,11 @@ export const makeApiCall = () => {
             .then(
                 (jsonifiedResponse) => {
                     dispatch(getSuppSuccess(jsonifiedResponse));
+                    dispatch(requestSupplements);
                 })
             .catch((error) => {
                 dispatch(getSuppFailure(error));
+                dispatch(requestSupplements);
             });
     }
 }
