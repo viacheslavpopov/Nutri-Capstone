@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 function MaladyList(props) {
   const { onSelectMalady } = props;
+
   return (
     <>
       <h2><button onClick={ () => onSelectMalady('sugar')}>Blood Sugar Support</button></h2>
