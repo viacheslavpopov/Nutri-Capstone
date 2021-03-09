@@ -3,10 +3,10 @@ import React from 'react';
 function About() {
     return (
         <>
-          <div class="row">
-            <div class="col-4 mx-auto">
-              <div class="card border-0">
-                <div class="card-body">
+          <div className="row">
+            <div className="col-4 mx-auto">
+              <div className="card border-0">
+                <div className="card-body">
                   <h1>About Nutri</h1>
                   <hr />
                   <p>Nutri is short for '<strong>nutrients</strong>', and is pronounced "<em>nu-tree</em>". The Nutri website was created by Chelsea Becker, a former Nutritionist, who is now a software developer. During her career as a nutritionist, she was often asked the same question time and time again: "What would be a good supplement to take for ______? (fill in the blank with any health issue)". There didn't seem to be a place online that would allow a person to simply click on a health issue and view the supplements used to support that health issue. Thus, Nutri was born.</p>

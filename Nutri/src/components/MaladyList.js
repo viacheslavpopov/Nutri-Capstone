@@ -6,10 +6,10 @@ function MaladyList(props) {
 
   return (
     <>
-      <div class="row">
-        <div class="col-4 mx-auto">
-          <div class="card border-0">
-            <div class="card-body">
+      <div className="row">
+        <div className="col-4 mx-auto">
+          <div className="card border-0">
+            <div className="card-body">
               <h4>Welcome to the Nutri supplement database!</h4>
               <h5>Click the links below to view supplement suggestions.</h5>
               <hr />
@@ -18,6 +18,8 @@ function MaladyList(props) {
               <h2><button className="btn btn-info" onClick={ () => onSelectMalady('immune') }>Immune System Support</button></h2>
               <h2><button className="btn btn-info" onClick={ () => onSelectMalady('liver') }>Liver Health</button></h2>
               <h2><button className="btn btn-info" onClick={ () => onSelectMalady('skin') }>Skin Health</button></h2>
+              <h2><button className="btn btn-info" onClick={ () => onSelectMalady('digestive') }>Digestive Health</button></h2>
+              <h2><button className="btn btn-info" onClick={ () => onSelectMalady('athletic') }>Athletic Performance</button></h2>
             </div>
           </div>
         </div>

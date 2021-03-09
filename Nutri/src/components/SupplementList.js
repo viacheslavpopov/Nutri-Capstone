@@ -9,10 +9,10 @@ function SupplementList(props) {
 
   return (
     <>
-      <div class="row">
-        <div class="col-10 mx-auto">
-          <div class="card">
-            <div class="card-body">
+      <div className="row">
+        <div className="col-10 mx-auto">
+          <div className="card">
+            <div className="card-body">
               <ul>
                 {data.map((supplement, index) =>
                     <li key={index}>

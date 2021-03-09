@@ -3,10 +3,10 @@ import React from 'react';
 function Help() {
     return (
         <>
-          <div class="row">
-            <div class="col-4 mx-auto">
-              <div class="card border-0">
-                <div class="card-body">
+          <div className="row">
+            <div className="col-4 mx-auto">
+              <div className="card border-0">
+                <div className="card-body">
                   <h1>Help Page</h1>
                   <hr />
                   <h2>FAQs</h2>
