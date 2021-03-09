@@ -10,13 +10,22 @@ function SupplementList(props) {
   return (
     <>
       <ul>
+      <div className="gray-bkg">
         {data.map((supplement, index) =>
             <li key={index}>
-                <p>{supplement.name}</p>
+                <h2 id="supp">{supplement.name}</h2>
+                <hr />
+                <h4 id="supp">Supplement Type:</h4>
+                <p id="supp">{supplement.type}</p>
+                <h4 id="supp">Dosing:</h4>
+                <p id="supp">{supplement.dosing}</p>
+                <h4 id="supp">Contraindications:</h4>
+                <p id="supp">{supplement.contraindications}</p>
             </li>
         )}
+      </div>
       </ul>
-      <button onClick={ () => onSelectBackButton() }>Back to Malady List</button>
+      <button className="btn btn-info" onClick={ () => onSelectBackButton() }>Back to Malady List</button>
     </>
   );
 
