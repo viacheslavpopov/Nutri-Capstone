@@ -6,8 +6,23 @@ import SupplementControl from './SupplementControl';
 function App() {
     return (
         <div className="App">
+        <Router>
             <NavBar />
-            <SupplementControl />
+            <Switch>
+                <Route path='/'>
+                    <SupplementControl />
+                </Route>
+                <Route path='/help'>
+                    <Help />
+                </Route>
+                <Route path='/resources'>
+                    <Resources />
+                </Route>
+                <Route path='/about'>
+                    <About />
+                </Route>
+            </Switch>
+        </Router>
         </div>
     );
 }
