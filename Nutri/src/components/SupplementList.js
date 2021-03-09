@@ -1,10 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import PropTypes from 'prop-types';
 
 function SupplementList(props) {
-  // const { suppData } = props;
+
   const data = useSelector(state => state.suppData);
-  // get suppData from the store. Use hook?
+  const { onSelectBackButton } = props;
+
   return (
     <>
       <ul>
@@ -14,15 +16,17 @@ function SupplementList(props) {
             </li>
         )}
       </ul>
-      <button>Back to Malady List</button>
+      <button onClick={ () => onSelectBackButton() }>Back to Malady List</button>
     </>
   );
 
 }
 
-export default SupplementList;
+SupplementList.propTypes = {
+  onSelectBackButton: PropTypes.func
+}
 
-// can get state from props because of redux?
+export default SupplementList;
 
 // what does this mean? link for contraindications and maladies 
 // display all supplement details on supplement list page, removing need for id
