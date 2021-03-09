@@ -9,23 +9,29 @@ function SupplementList(props) {
 
   return (
     <>
-      <ul>
-      <div className="gray-bkg">
-        {data.map((supplement, index) =>
-            <li key={index}>
-                <h2 id="supp">{supplement.name}</h2>
-                <hr />
-                <h4 id="supp">Supplement Type:</h4>
-                <p id="supp">{supplement.type}</p>
-                <h4 id="supp">Dosing:</h4>
-                <p id="supp">{supplement.dosing}</p>
-                <h4 id="supp">Contraindications:</h4>
-                <p id="supp">{supplement.contraindications}</p>
-            </li>
-        )}
+      <div class="row">
+        <div class="col-10 mx-auto">
+          <div class="card">
+            <div class="card-body">
+              <ul>
+                {data.map((supplement, index) =>
+                    <li key={index}>
+                        <h2 id="supp">{supplement.name}</h2>
+                        <hr />
+                        <h4 id="supp">Supplement Type:</h4>
+                        <p id="supp">{supplement.type}</p>
+                        <h4 id="supp">Dosing:</h4>
+                        <p id="supp">{supplement.dosing}</p>
+                        <h4 id="supp">Contraindications:</h4>
+                        <p id="supp">{supplement.contraindications}</p>
+                    </li>
+                )}
+              </ul>
+              <button className="btn btn-info" onClick={ () => onSelectBackButton() }>Back to Malady List</button>
+            </div>
+          </div>
+        </div>
       </div>
-      </ul>
-      <button className="btn btn-info" onClick={ () => onSelectBackButton() }>Back to Malady List</button>
     </>
   );
 

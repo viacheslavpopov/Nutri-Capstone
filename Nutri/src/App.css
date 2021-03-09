@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;700&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'IBM Plex Serif', serif;
 }
 
 .App-logo {
@@ -51,18 +54,23 @@ ul, li {
 }
 
 #supp-name {
-  color: rgb(102, 162, 202);
   text-align: left;
   text-align: justify;
-}
-
-.gray-bkg {
-  background-color: rgb(199, 199, 199);
-  opacity: 80%;
-  padding: 50px;
 }
 
 .nav-bar {
   margin-bottom: 40px;
   margin-top: 40px;
+}
+
+.card {
+  border: none;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
+.background {
+  background-image: url("./img/spices.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }

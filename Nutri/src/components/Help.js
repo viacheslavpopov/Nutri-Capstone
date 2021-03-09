@@ -3,11 +3,12 @@ import React from 'react';
 function Help() {
     return (
         <>
-        <h1>Help Page</h1>
           <div class="row">
             <div class="col-4 mx-auto">
               <div class="card border-0">
                 <div class="card-body">
+                  <h1>Help Page</h1>
+                  <hr />
                   <h2>FAQs</h2>
                   <h4>What does 'contraindications' mean?</h4>
                   <p>According to Wikipedia, a contraindication is a condition or factor that serves as a reason to withhold a certain medical treatment due to the harm that it would cause the patient. This means that if you have a certain medical condition that would conflict with the use of a supplement, you should either avoid taking that supplement, or consult with your physician first before taking it.</p>
