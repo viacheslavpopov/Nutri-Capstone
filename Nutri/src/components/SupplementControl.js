@@ -28,26 +28,26 @@ class SupplementControl extends React.Component {
     handleSelectMalady = (maladyType) => {
         const { dispatch } = this.props;
         console.log("hello");
-        const action = a.toggleMal;
-        const action2 = a.toggleSuppList;
+        const action = a.toggleMal();
+        const action2 = a.toggleSuppList();
+        dispatch(makeApiCall(maladyType)); // getting called last, needs to be finished before next two actions are called
         dispatch(action);
         dispatch(action2);
-        dispatch(makeApiCall(maladyType));
+        console.log(this.props.suppListVisibleOnPage);
     }
 
     render() {
         let currentVisibleState = null;
-        const { error } = this.props;
+        const { error, suppData } = this.props;
         if (error) {
             return <>Error: {error.message}</>
-        } else if (this.props.suppListVisibleOnPage) {
-            currentVisibleState = <SupplementList />
-        } else {
+        } else if (suppData.length === 0 && this.props.malListVisibleOnPage) {
             currentVisibleState = <MaladyList onSelectMalady = {this.handleSelectMalady} />;
         }
         return (
             <>
                 {currentVisibleState}
+                {suppData.length > 1 && <SupplementList />}
             </>
         )
     }
