@@ -35,7 +35,6 @@ export const makeApiCall = (maladyType) => {
                 (jsonifiedResponse) => {
                     dispatch(getSuppSuccess(jsonifiedResponse));
                     dispatch(requestSupplements);
-                    dispatch(toggleSuppList);
                 })
             .catch((error) => {
                 dispatch(getSuppFailure(error));
