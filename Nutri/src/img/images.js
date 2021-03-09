@@ -1,0 +1,1 @@
+export const logo = require('./nutri.png');
