@@ -6,11 +6,11 @@ function MaladyList(props) {
 
   return (
     <>
-      <h2><button onClick={ () => onSelectMalady('sugar') }>Blood Sugar Support</button></h2>
-      <h2><button onClick={ () => onSelectMalady('detox') }>Detox Support</button></h2>
-      <h2><button onClick={ () => onSelectMalady('immune') }>Immune System Support</button></h2>
-      <h2><button onClick={ () => onSelectMalady('liver') }>Liver Health</button></h2>
-      <h2><button onClick={ () => onSelectMalady('skin') }>Skin Health</button></h2>
+      <h2><button className="btn btn-info" onClick={ () => onSelectMalady('sugar') }>Blood Sugar Support</button></h2>
+      <h2><button className="btn btn-info" onClick={ () => onSelectMalady('detox') }>Detox Support</button></h2>
+      <h2><button className="btn btn-info" onClick={ () => onSelectMalady('immune') }>Immune System Support</button></h2>
+      <h2><button className="btn btn-info" onClick={ () => onSelectMalady('liver') }>Liver Health</button></h2>
+      <h2><button className="btn btn-info" onClick={ () => onSelectMalady('skin') }>Skin Health</button></h2>
     </>
   )
 }
