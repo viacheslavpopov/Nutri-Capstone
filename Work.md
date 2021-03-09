@@ -8,4 +8,9 @@ Notes:
 Additional Resources section can guide users to other websites with more in-depth information about nutrients not included in database.
 Add'l Resources - Linus Pauling, Dr. Axe, HealthLine... 
 
-**Need to figure out store situation.. suppData is nested in the databaseReducer and need it to be separated or need to find a way to access it
+**DONE => Need to figure out store situation.. suppData is nested in the databaseReducer and need it to be separated or need to find a way to access it
+
+Need to figure out why if there is only 1 supplement is does not map. Maybe simply add more seeded data to have at least 2 each?
+
+add 1+ detox and 1+ liver
+dandelion, bentonite clay
