@@ -10,24 +10,8 @@ import SupplementList from './SupplementList';
 
 class SupplementControl extends React.Component {
 
-    // componentDidMount() {
-    //     const { dispatch } = this.props;
-    //     dispatch(makeApiCall());
-    // }
-        // suppData is undefined
-
-    // handleToggleLists = () => {
-    //     const { dispatch } = this.props;
-    //     const action = a.toggleMal;
-    //     const action2 = a.toggleSuppList;
-    //     dispatch(action);
-    //     console.log("hello");
-    //     dispatch(action2);
-    // }
-    // API call first in one function, trigger other state changes in next function? 
     handleSelectMalady = (maladyType) => {
         const { dispatch } = this.props;
-        console.log("hello");
         const action = a.toggleMal();
         const action2 = a.toggleSuppList();
         dispatch(makeApiCall(maladyType)); // getting called last, needs to be finished before next two actions are called
@@ -36,18 +20,29 @@ class SupplementControl extends React.Component {
         console.log(this.props.suppListVisibleOnPage);
     }
 
+    handleReturnToMainPage = () => {
+        const { dispatch } = this.props;
+        const action = a.toggleMal();
+        const action2 = a.toggleSuppList();
+        dispatch(action);
+        dispatch(action2);
+        console.log("hello");
+    }
+
     render() {
         let currentVisibleState = null;
         const { error, suppData } = this.props;
         if (error) {
             return <>Error: {error.message}</>
-        } else if (suppData.length === 0 && this.props.malListVisibleOnPage) {
+        } else if (this.props.malListVisibleOnPage) {
             currentVisibleState = <MaladyList onSelectMalady = {this.handleSelectMalady} />;
+        } else if (suppData.length > 1 && this.props.suppListVisibleOnPage) {
+            currentVisibleState = <SupplementList onSelectBackButton = {this.handleReturnToMainPage} />
         }
         return (
             <>
                 {currentVisibleState}
-                {suppData.length > 1 && <SupplementList />}
+                {/* {suppData.length > 1 && <SupplementList />} */}
             </>
         )
     }
@@ -72,24 +67,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps)(SupplementControl);
-
-
-// const { error, isLoading, suppData} = this.props;
-//         if (error) {
-//             return <>Error: { error.message }</>
-//         } else if (isLoading || !suppData) {
-//             return <>Loading...</>
-//         } else {
-//             return (
-//                 <>
-//                 <MaladyList />
-//                 <ul>
-//                     {suppData.map((supplement, index) =>
-//                         <li key = {index}>
-//                             <p>{supplement.name}</p>
-//                         </li>
-//                     )}
-//                 </ul>
-//                 </>
-//             );
-//         }
