@@ -6,6 +6,8 @@ function MaladyList(props) {
 
   return (
     <>
+      <h4>Click the links below to view supplement suggestions</h4>
+      <hr />
       <h2><button className="btn btn-info" onClick={ () => onSelectMalady('sugar') }>Blood Sugar Support</button></h2>
       <h2><button className="btn btn-info" onClick={ () => onSelectMalady('detox') }>Detox Support</button></h2>
       <h2><button className="btn btn-info" onClick={ () => onSelectMalady('immune') }>Immune System Support</button></h2>
