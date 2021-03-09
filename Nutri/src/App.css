@@ -63,5 +63,6 @@ ul, li {
 }
 
 .nav-bar {
-  padding: 20px;
+  margin-bottom: 40px;
+  margin-top: 40px;
 }
