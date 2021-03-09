@@ -2,6 +2,10 @@ import './../App.css';
 import React from 'react';
 import NavBar from './NavBar';
 import SupplementControl from './SupplementControl';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Help from './Help';
+import Resources from './Resources';
+import About from './About';
 
 function App() {
     return (
@@ -9,9 +13,6 @@ function App() {
         <Router>
             <NavBar />
             <Switch>
-                <Route path='/'>
-                    <SupplementControl />
-                </Route>
                 <Route path='/help'>
                     <Help />
                 </Route>
@@ -20,6 +21,9 @@ function App() {
                 </Route>
                 <Route path='/about'>
                     <About />
+                </Route>
+                <Route path='/'>
+                    <SupplementControl />
                 </Route>
             </Switch>
         </Router>
