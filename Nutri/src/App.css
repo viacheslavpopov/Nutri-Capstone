@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+ul, li {
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Spartan', sans-serif;
+}
+
+#supp {
+  text-align: left;
+  text-align: justify;
+}
+
+#supp-name {
+  color: rgb(102, 162, 202);
+  text-align: left;
+  text-align: justify;
+}
+
+.gray-bkg {
+  background-color: rgb(199, 199, 199);
+  opacity: 80%;
+  padding: 50px;
+}
+
+.nav-bar {
+  padding: 20px;
+}
