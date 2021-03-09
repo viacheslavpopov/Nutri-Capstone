@@ -1,16 +1,20 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 function SupplementList(props) {
-  const { suppData } = props;
+  // const { suppData } = props;
+  const data = useSelector(state => state.suppData);
+  // get suppData from the store. Use hook?
   return (
     <>
       <ul>
-        {suppData.map((supplement, index) =>
-            <li key = {index}>
+        {data.map((supplement, index) =>
+            <li key={index}>
                 <p>{supplement.name}</p>
             </li>
         )}
       </ul>
+      <button>Back to Malady List</button>
     </>
   );
 
