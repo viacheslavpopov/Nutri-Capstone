@@ -26,6 +26,11 @@ export const getSuppFailure = (error) => ({
     error
 });
 
+export const getMalady = (maladyName) => ({
+    type: c.DISPLAY_MAL,
+    maladyName
+})
+
 export const makeApiCall = (maladyType) => {
     return dispatch => {
         dispatch(requestSupplements);

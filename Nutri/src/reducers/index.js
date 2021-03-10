@@ -5,6 +5,7 @@ import getSuppFailReducer from './get-supp-fail-reducer';
 import getSuppReducer from './get-supp-reducer';
 import requestSuppReducer from './request-supp-reducer';
 import { combineReducers } from 'redux';
+import maladyDisplayReducer from './malady-display-reducer';
 
 
 const rootReducer = combineReducers({
@@ -13,7 +14,8 @@ const rootReducer = combineReducers({
     malListVisibleOnPage: malListVisibleReducer,
     suppData: getSuppReducer,
     isLoading: requestSuppReducer,
-    error: getSuppFailReducer
+    error: getSuppFailReducer,
+    maladyName: maladyDisplayReducer
 });
 
 export default rootReducer;
