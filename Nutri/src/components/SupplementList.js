@@ -44,7 +44,3 @@ SupplementList.propTypes = {
 }
 
 export default SupplementList;
-
-// what does this mean? link for contraindications and maladies 
-// display all supplement details on supplement list page, removing need for id
-// one API call per category, returning only the supplements we need. Then those are stored in suppData. Then can access the id?
