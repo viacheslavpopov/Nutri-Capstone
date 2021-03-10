@@ -10,13 +10,15 @@ import SupplementList from './SupplementList';
 
 class SupplementControl extends React.Component {
 
-    handleSelectMalady = (maladyType) => {
+    handleSelectMalady = (maladyType, maladyName) => {
         const { dispatch } = this.props;
         const action = a.toggleMal();
         const action2 = a.toggleSuppList();
-        dispatch(makeApiCall(maladyType)); // getting called last, needs to be finished before next two actions are called
+        const action3 = a.getMalady(maladyName);
+        dispatch(makeApiCall(maladyType));
         dispatch(action);
         dispatch(action2);
+        dispatch(action3);
         console.log(this.props.suppListVisibleOnPage);
     }
 
@@ -53,7 +55,8 @@ SupplementControl.propTypes = {
     malListVisibleOnPage: PropTypes.bool,
     suppData: PropTypes.array,
     isLoading: PropTypes.bool,
-    error: PropTypes.string
+    error: PropTypes.string,
+    maladyName: PropTypes.string
 }
 
 const mapStateToProps = state => {
@@ -62,7 +65,8 @@ const mapStateToProps = state => {
         malListVisibleOnPage: state.malListVisibleOnPage,
         suppData: state.suppData,
         isLoading: state.isLoading,
-        error: state.error
+        error: state.error,
+        maladyName: state.maladyName
     }
 }
 
