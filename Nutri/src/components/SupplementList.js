@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 function SupplementList(props) {
 
   const data = useSelector(state => state.suppData);
+  const malName = useSelector(state => state.maladyName);
   const { onSelectBackButton } = props;
 
   return (
@@ -13,6 +14,7 @@ function SupplementList(props) {
         <div className="col-10 mx-auto">
           <div className="card">
             <div className="card-body">
+              <h3>{malName}</h3>
               <ul>
                 {data.map((supplement, index) =>
                     <li key={index}>
