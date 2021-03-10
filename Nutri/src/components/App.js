@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Help from './Help';
 import Resources from './Resources';
 import About from './About';
+import Signin from './Signin';
+import Signup from './Signup';
 
 function App() {
     return (
@@ -22,6 +24,12 @@ function App() {
                     </Route>
                     <Route path='/about'>
                         <About />
+                    </Route>
+                    <Route path='/signin'>
+                        <Signin />
+                    </Route>
+                    <Route path='/signup'>
+                        <Signup />
                     </Route>
                     <Route path='/'>
                         <SupplementControl />
