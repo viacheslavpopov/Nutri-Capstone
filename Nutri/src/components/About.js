@@ -4,7 +4,7 @@ function About() {
     return (
         <>
           <div className="row">
-            <div className="col-4 mx-auto">
+            <div className="col-6 mx-auto">
               <div className="card border-0">
                 <div className="card-body">
                   <h1>About Nutri</h1>

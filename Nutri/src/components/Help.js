@@ -4,7 +4,7 @@ function Help() {
     return (
         <>
           <div className="row">
-            <div className="col-4 mx-auto">
+            <div className="col-6 mx-auto">
               <div className="card border-0">
                 <div className="card-body">
                   <h1>Help Page</h1>
