@@ -14,11 +14,11 @@ function SupplementList(props) {
         <div className="col-10 mx-auto">
           <div className="card">
             <div className="card-body">
-              <h3>{malName}</h3>
+              <h1>{malName}</h1>
               <ul>
                 {data.map((supplement, index) =>
-                    <li key={index}>
-                        <h2 id="supp">{supplement.name}</h2>
+                    <li key={index} className="text">
+                        <h2 id="supp"><strong>{supplement.name}</strong></h2>
                         <hr />
                         <h4 id="supp">Supplement Type:</h4>
                         <p id="supp">{supplement.type}</p>
@@ -26,6 +26,7 @@ function SupplementList(props) {
                         <p id="supp">{supplement.dosing}</p>
                         <h4 id="supp">Contraindications:</h4>
                         <p id="supp">{supplement.contraindications}</p>
+                        <br />
                     </li>
                 )}
               </ul>
