@@ -1,6 +1,4 @@
 import React from 'react';
-// import SupplementDetail from './SupplementDetail';
-// import SupplementList from './SupplementList';
 import MaladyList from './MaladyList';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
