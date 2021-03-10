@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { makeApiCall } from './../actions';
 import * as a from './../actions';
 import SupplementList from './SupplementList';
+import { withFirestore, isLoaded } from 'react-redux-firebase';
 
 class SupplementControl extends React.Component {
 
@@ -31,10 +32,15 @@ class SupplementControl extends React.Component {
 
     render() {
         let currentVisibleState = null;
+        const auth = this.props.firebase.auth();
         const { error, suppData } = this.props;
         if (error) {
             return <>Error: {error.message}</>
-        } else if (this.props.malListVisibleOnPage) {
+        } else if (!isLoaded(auth)) {
+            return (
+                <><h1>Loading...</h1></>
+            )
+        } else if (isLoaded(auth) && this.props.malListVisibleOnPage) {
             currentVisibleState = <MaladyList onSelectMalady = {this.handleSelectMalady} />;
         } else if (suppData.length > 1 && this.props.suppListVisibleOnPage) {
             currentVisibleState = <SupplementList onSelectBackButton = {this.handleReturnToMainPage} />
@@ -68,4 +74,6 @@ const mapStateToProps = state => {
     }
 }
 
-export default connect(mapStateToProps)(SupplementControl);
+SupplementControl = connect(mapStateToProps)(SupplementControl);
+
+export default withFirestore(SupplementControl);
