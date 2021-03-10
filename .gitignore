@@ -1,0 +1,5 @@
+.env
+/bin
+/obj
+/build
+/node_modules
