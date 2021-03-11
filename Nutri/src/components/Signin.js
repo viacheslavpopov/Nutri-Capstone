@@ -1,13 +1,14 @@
 import firebase from 'firebase/app';
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import * as a from './../actions';
 
 function Signin() {
 
   const history = useHistory();
   const dispatch = useDispatch();
+  // const errorMessage = useSelector(state => state.errorMessage); // accesses stat at this point only, does not refresh. Need to use local state?
   let errorMessage = null;
 
   function doSignIn(e) {
@@ -17,7 +18,7 @@ function Signin() {
     firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
       console.log('Successfully signed in!');
     }).catch(function(error) {
-      errorMessage = error.message;
+      dispatch(a.displayLoginError(error.message)); // need to grab state after this action has been dispatched
     });
     if (errorMessage === null) {
       dispatch(a.toggleLogin());
