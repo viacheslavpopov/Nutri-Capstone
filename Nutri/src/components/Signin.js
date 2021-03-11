@@ -1,7 +1,13 @@
 import firebase from 'firebase/app';
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import * as a from './../actions';
 
 function Signin() {
+
+  const history = useHistory();
+  const dispatch = useDispatch();
 
   function doSignIn(e) {
     e.preventDefault();
@@ -12,14 +18,12 @@ function Signin() {
     }).catch(function(error) {
       console.log(error.messsage);
     });
+    dispatch(a.toggleLogin());
+    history.push('/');
   }
 
-  function doSignOut() {
-    firebase.auth().signOut().then(function() {
-      console.log('Successfully signed out!');
-    }).catch(function(error) {
-      console.log(error.message);
-    });
+  function navigateToSignUp() {
+    history.push('/signup');
   }
 
   return (
@@ -38,14 +42,13 @@ function Signin() {
                   type='password'
                   name='signinPassword'
                   placeholder='Password' />
-                  <br />
+                  <hr />
                 <button className='btn btn-info' type='submit'>Sign in</button>
               </form>
               <br />
               <p>Don't have an account? Click the 'Sign Up' Button!</p>
-              <button className='btn btn-info'>Sign Up</button>
+              <button className='btn btn-info' onClick={navigateToSignUp}>Sign Up</button>
               <hr />
-              <button className='btn btn-info' onClick={doSignOut}>Sign Out</button>
             </div>
           </div>
         </div>
@@ -56,6 +59,3 @@ function Signin() {
 }
 
 export default Signin;
-
-// if user is logged in, display only log out
-// if user doesn't have an account, have a separate component for sign up
