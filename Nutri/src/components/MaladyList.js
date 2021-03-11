@@ -7,10 +7,10 @@ function MaladyList(props) {
   return (
     <>
       <div className="row">
-        <div className="col-4 mx-auto">
+        <div className="col-5 mx-auto">
           <div className="card border-0">
             <div className="card-body">
-              <h4>Welcome to the Nutri supplement database!</h4>
+              <h4><strong>Welcome to the Nutri supplement database!</strong></h4>
               <h5>Click the links below to view supplement suggestions.</h5>
               <hr />
               <h2><button className="btn btn-info" onClick={ () => onSelectMalady('sugar', 'Blood Sugar Support') }>Blood Sugar Support</button></h2>
