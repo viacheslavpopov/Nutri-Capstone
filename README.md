@@ -13,6 +13,8 @@ A website to search for supplements that are suitable for supporting the health 
 
 ### **Preview**
 
+[![preview.jpg](https://i.postimg.cc/SxLkKjZD/preview.jpg)](https://postimg.cc/9Dfv8XH7)
+
 ### **Logo (WIP)**
 
 [![pixlr-bg-result-2.png](https://i.postimg.cc/k4kwW37R/pixlr-bg-result-2.png)](https://postimg.cc/8JmhVYJT)
@@ -31,7 +33,9 @@ C# 7.3.0<br>
 .NET Core 2.1.0<br>
 Entity Framework Core 2.2.6<br>
 MySQL Workbench 8.0 for Windows<br>
-Postman
+Postman<br>
+Swashbuckle<br>
+Swagger
 
 ### **Known Bugs**
 
