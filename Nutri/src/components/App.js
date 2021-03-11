@@ -8,6 +8,7 @@ import Resources from './Resources';
 import About from './About';
 import Signin from './Signin';
 import Signup from './Signup';
+import Signout from './Signout';
 
 function App() {
     return (
@@ -30,6 +31,9 @@ function App() {
                     </Route>
                     <Route path='/signup'>
                         <Signup />
+                    </Route>
+                    <Route path='/signout'>
+                        <Signout />
                     </Route>
                     <Route path='/'>
                         <SupplementControl />
