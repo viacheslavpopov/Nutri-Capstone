@@ -2,12 +2,15 @@ import firebase from 'firebase/app';
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 import * as a from './../actions';
 
 function Signin() {
 
+
   const history = useHistory();
   const dispatch = useDispatch();
+  let errorMessage = null;
 
   function doSignIn(e) {
     e.preventDefault();
@@ -16,10 +19,12 @@ function Signin() {
     firebase.auth().signInWithEmailAndPassword(email, password).then(function() {
       console.log('Successfully signed in!');
     }).catch(function(error) {
-      console.log(error.messsage);
+      errorMessage = error.message;
     });
-    dispatch(a.toggleLogin());
-    history.push('/');
+    if (errorMessage === null) {
+      dispatch(a.toggleLogin());
+      history.push('/');
+    }
   }
 
   function navigateToSignUp() {
@@ -45,6 +50,7 @@ function Signin() {
                   <hr />
                 <button className='btn btn-info' type='submit'>Sign in</button>
               </form>
+              {errorMessage != null && <p>{errorMessage}</p>}
               <br />
               <p>Don't have an account? Click the 'Sign Up' Button!</p>
               <button className='btn btn-info' onClick={navigateToSignUp}>Sign Up</button>
