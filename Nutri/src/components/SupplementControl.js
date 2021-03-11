@@ -60,7 +60,8 @@ SupplementControl.propTypes = {
     suppData: PropTypes.array,
     isLoading: PropTypes.bool,
     error: PropTypes.string,
-    maladyName: PropTypes.string
+    maladyName: PropTypes.string,
+    loggedIn: PropTypes.bool
 }
 
 const mapStateToProps = state => {
@@ -70,7 +71,9 @@ const mapStateToProps = state => {
         suppData: state.suppData,
         isLoading: state.isLoading,
         error: state.error,
-        maladyName: state.maladyName
+        maladyName: state.maladyName,
+        firestore: state.firestore,
+        loggedIn: state.loggedIn
     }
 }
 
