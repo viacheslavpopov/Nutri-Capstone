@@ -15,6 +15,7 @@ function Signup() {
     }).catch(function(error) {
       console.log(error.message);
     });
+    history.push('/');
   }
 
   function navigateToSignin() {
