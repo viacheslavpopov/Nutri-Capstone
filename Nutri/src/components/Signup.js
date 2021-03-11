@@ -1,7 +1,10 @@
 import firebase from 'firebase/app';
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 function Signup() {
+
+  const history = useHistory();
 
   function doSignUp(e) {
     e.preventDefault();
@@ -12,6 +15,10 @@ function Signup() {
     }).catch(function(error) {
       console.log(error.message);
     });
+  }
+
+  function navigateToSignin() {
+    history.push('/signin');
   }
 
   return (
@@ -30,8 +37,11 @@ function Signup() {
                   type='password'
                   name='password'
                   placeholder='password' />
+                <hr />
                 <button className='btn btn-info' type='submit'>Sign Up</button>
               </form>
+              <br />
+              <button className='btn btn-info' onClick={navigateToSignin}>Back to Sign In</button>
             </div>
           </div>
         </div>
