@@ -29,7 +29,11 @@ export const getSuppFailure = (error) => ({
 export const getMalady = (maladyName) => ({
     type: c.DISPLAY_MAL,
     maladyName
-})
+});
+
+export const toggleLogin = () => ({
+    type: c.TOGGLE_LOGIN
+});
 
 export const makeApiCall = (maladyType) => {
     return dispatch => {

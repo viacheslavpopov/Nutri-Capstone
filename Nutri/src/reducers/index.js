@@ -7,6 +7,7 @@ import requestSuppReducer from './request-supp-reducer';
 import { combineReducers } from 'redux';
 import maladyDisplayReducer from './malady-display-reducer';
 import { firestoreReducer } from 'redux-firestore';
+import loginReducer from './login-reducer';
 
 
 const rootReducer = combineReducers({
@@ -17,7 +18,8 @@ const rootReducer = combineReducers({
     isLoading: requestSuppReducer,
     error: getSuppFailReducer,
     maladyName: maladyDisplayReducer,
-    firestore: firestoreReducer
+    firestore: firestoreReducer,
+    loggedIn: loginReducer
 });
 
 export default rootReducer;
