@@ -8,6 +8,7 @@ import { combineReducers } from 'redux';
 import maladyDisplayReducer from './malady-display-reducer';
 import { firestoreReducer } from 'redux-firestore';
 import loginReducer from './login-reducer';
+import errorMessageReducer from './error-message-reducer';
 
 
 const rootReducer = combineReducers({
@@ -19,7 +20,8 @@ const rootReducer = combineReducers({
     error: getSuppFailReducer,
     maladyName: maladyDisplayReducer,
     firestore: firestoreReducer,
-    loggedIn: loginReducer
+    loggedIn: loginReducer,
+    errorMessage: errorMessageReducer
 });
 
 export default rootReducer;

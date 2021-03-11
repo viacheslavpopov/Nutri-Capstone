@@ -35,6 +35,11 @@ export const toggleLogin = () => ({
     type: c.TOGGLE_LOGIN
 });
 
+export const displayLoginError = (errorMessage) => ({
+    type: c.DISPLAY_LOGIN_ERROR,
+    errorMessage
+});
+
 export const makeApiCall = (maladyType) => {
     return dispatch => {
         dispatch(requestSupplements);

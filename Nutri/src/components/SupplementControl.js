@@ -73,7 +73,8 @@ const mapStateToProps = state => {
         error: state.error,
         maladyName: state.maladyName,
         firestore: state.firestore,
-        loggedIn: state.loggedIn
+        loggedIn: state.loggedIn,
+        errorMessage: state.errorMessage
     }
 }
 
