@@ -2,11 +2,9 @@ import firebase from 'firebase/app';
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
 import * as a from './../actions';
 
 function Signin() {
-
 
   const history = useHistory();
   const dispatch = useDispatch();
@@ -33,7 +31,7 @@ function Signin() {
 
   return (
     <>
-    <div className="row">
+      <div className="row">
         <div className="col-4 mx-auto">
           <div className="card border-0">
             <div className="card-body">
@@ -47,14 +45,15 @@ function Signin() {
                   type='password'
                   name='signinPassword'
                   placeholder='Password' />
-                  <hr />
+                  <br />
+                  <br />
                 <button className='btn btn-info' type='submit'>Sign in</button>
               </form>
               {errorMessage != null && <p>{errorMessage}</p>}
               <br />
+              <hr />
               <p>Don't have an account? Click the 'Sign Up' Button!</p>
               <button className='btn btn-info' onClick={navigateToSignUp}>Sign Up</button>
-              <hr />
             </div>
           </div>
         </div>
