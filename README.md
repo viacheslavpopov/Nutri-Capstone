@@ -15,13 +15,13 @@ A website to search for supplements that are suitable for supporting the health 
 
 [![preview.jpg](https://i.postimg.cc/SxLkKjZD/preview.jpg)](https://postimg.cc/9Dfv8XH7)
 
-### **Logo (WIP)**
+### **Logo**
 
-[![pixlr-bg-result-2.png](https://i.postimg.cc/k4kwW37R/pixlr-bg-result-2.png)](https://postimg.cc/8JmhVYJT)
+[![nutri.png](https://i.postimg.cc/mkW5ZxgH/nutri.png)](https://postimg.cc/8JwHw0Wp)
 
 ### **Component Diagram**
 
-[![Nutri-Diagram.jpg](https://i.postimg.cc/xCm3VZPY/Nutri-Diagram.jpg)](https://postimg.cc/N9gH1pVP)
+[![Component-Diagram.jpg](https://i.postimg.cc/ydR7rzGg/Component-Diagram.jpg)](https://postimg.cc/5Yxc6Dbb)
 
 ### **Technologies Used**
 
