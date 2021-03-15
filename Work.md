@@ -14,3 +14,5 @@ Need to figure out why if there is only 1 supplement is does not map. Maybe simp
 
 add 1+ detox and 1+ liver
 dandelion, bentonite clay
+
+Create reducers for all components with a toggle instead of routing to prevent redux refresh upon routing.. messing up sign in navbar toggle.
