@@ -1,11 +1,13 @@
 import React from 'react';
 import MaladyList from './MaladyList';
+import SupplementList from './SupplementList';
+import Resources from './Resources';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { makeApiCall } from './../actions';
 import * as a from './../actions';
-import SupplementList from './SupplementList';
 import { withFirestore, isLoaded } from 'react-redux-firebase';
+
 
 class SupplementControl extends React.Component {
 
@@ -44,6 +46,9 @@ class SupplementControl extends React.Component {
             currentVisibleState = <MaladyList onSelectMalady = {this.handleSelectMalady} />;
         } else if (suppData.length > 1 && this.props.suppListVisibleOnPage) {
             currentVisibleState = <SupplementList onSelectBackButton = {this.handleReturnToMainPage} />
+        } else if (this.props.resourcesVisible) {
+            currentVisibleState = <Resources />
+            console.log("Hey");
         }
         return (
             <>
@@ -74,7 +79,8 @@ const mapStateToProps = state => {
         maladyName: state.maladyName,
         firestore: state.firestore,
         loggedIn: state.loggedIn,
-        errorMessage: state.errorMessage
+        errorMessage: state.errorMessage,
+        resourcesVisible: state.resourcesVisible
     }
 }
 

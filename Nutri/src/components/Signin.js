@@ -4,11 +4,11 @@ import { useHistory } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import * as a from './../actions';
 
-function Signin() {
+function Signin(props) {
 
   const history = useHistory();
   const dispatch = useDispatch();
-  // const errorMessage = useSelector(state => state.errorMessage); // accesses stat at this point only, does not refresh. Need to use local state?
+  // const errorMessage = useSelector(state => state.errorMessage); // accesses state at this point only, does not refresh. Need to use props instead
   let errorMessage = null;
 
   function doSignIn(e) {

@@ -1,4 +1,3 @@
-import suppDetailsVisibleReducer from './supp-details-visible-reducer';
 import suppListVisibleReducer from './supp-list-visible-reducer';
 import malListVisibleReducer from './mal-list-visible-reducer';
 import getSuppFailReducer from './get-supp-fail-reducer';
@@ -9,10 +8,9 @@ import maladyDisplayReducer from './malady-display-reducer';
 import { firestoreReducer } from 'redux-firestore';
 import loginReducer from './login-reducer';
 import errorMessageReducer from './error-message-reducer';
-
+import resourcesVisibleReducer from './resources-visible-reducer';
 
 const rootReducer = combineReducers({
-    suppDetailsVisibleOnPage: suppDetailsVisibleReducer,
     suppListVisibleOnPage: suppListVisibleReducer,
     malListVisibleOnPage: malListVisibleReducer,
     suppData: getSuppReducer,
@@ -21,7 +19,8 @@ const rootReducer = combineReducers({
     maladyName: maladyDisplayReducer,
     firestore: firestoreReducer,
     loggedIn: loginReducer,
-    errorMessage: errorMessageReducer
+    errorMessage: errorMessageReducer,
+    resourcesVisible: resourcesVisibleReducer
 });
 
 export default rootReducer;

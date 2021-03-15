@@ -1,18 +1,19 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { logo } from './../img/images';
-// import { FaAlignRight } from 'react-icons/fa';
-// import './App.css';
-
-// if  user is signed in, change Sign In to Sign Out with different route
-// access firestore.currentUser != null && 
-// if they sign up, automatically sign in
-
-// two versions of navbar, one when  user is logged in, other when not. use useSelector to get access to loginReducer
+import * as a from './../actions';
 
 function NavBar() {
 
     const login = useSelector(state => state.loggedIn);
+    const dispatch = useDispatch();
+
+    function handleDirectToResources() {
+        const action = a.toggleResources();
+        dispatch(action);
+        console.log("hi");
+    }
+    // Clicking on Resources in navbar does not trigger above function. State is therefore not changed. 
 
     if (login === true) {
         return (
@@ -29,7 +30,7 @@ function NavBar() {
                                     <a className="nav-link" href="/#">Home <span className="sr-only">(current)</span></a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="/resources#">Resources</a>
+                                    <p className="nav-link" onClick={handleDirectToResources()}>Resources</p>
                                 </li>
                                 <li className="nav-item">
                                     <a className="nav-link" href="/help#">Help</a>
@@ -37,8 +38,6 @@ function NavBar() {
                                 <li className="nav-item">
                                     <a className="nav-link" href="/about#">About</a>
                                 </li>
-                                {/* {loggedIn === true && <li className="nav-item" href="/signin">Sign Out</li>}
-                                {loggedIn === false && <li className="nav-item" href="/signin">Sign In</li>} */}
                                 <li className="nav-item">
                                     <a className="nav-link" href="/signout#">Sign Out</a>
                                 </li>
