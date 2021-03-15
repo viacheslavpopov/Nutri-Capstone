@@ -4,10 +4,6 @@ export const toggleMal = () => ({
     type: c.TOGGLE_MAL
 });
 
-export const toggleDetails = () => ({
-    type: c.TOGGLE_DETAILS
-});
-
 export const toggleSuppList = () => ({
     type: c.TOGGLE_SUPP_LIST
 });
