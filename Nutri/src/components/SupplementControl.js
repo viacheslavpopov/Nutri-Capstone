@@ -1,10 +1,10 @@
 import React from 'react';
 import MaladyList from './MaladyList';
+import SupplementList from './SupplementList';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { makeApiCall } from './../actions';
 import * as a from './../actions';
-import SupplementList from './SupplementList';
 import { withFirestore, isLoaded } from 'react-redux-firebase';
 
 class SupplementControl extends React.Component {
@@ -48,7 +48,6 @@ class SupplementControl extends React.Component {
         return (
             <>
                 {currentVisibleState}
-                {/* {suppData.length > 1 && <SupplementList />} */}
             </>
         )
     }
