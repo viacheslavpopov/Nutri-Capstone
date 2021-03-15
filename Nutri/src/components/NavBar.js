@@ -4,12 +4,6 @@ import { logo } from './../img/images';
 // import { FaAlignRight } from 'react-icons/fa';
 // import './App.css';
 
-// if  user is signed in, change Sign In to Sign Out with different route
-// access firestore.currentUser != null && 
-// if they sign up, automatically sign in
-
-// two versions of navbar, one when  user is logged in, other when not. use useSelector to get access to loginReducer
-
 function NavBar() {
 
     const login = useSelector(state => state.loggedIn);
@@ -37,8 +31,6 @@ function NavBar() {
                                 <li className="nav-item">
                                     <a className="nav-link" href="/about#">About</a>
                                 </li>
-                                {/* {loggedIn === true && <li className="nav-item" href="/signin">Sign Out</li>}
-                                {loggedIn === false && <li className="nav-item" href="/signin">Sign In</li>} */}
                                 <li className="nav-item">
                                     <a className="nav-link" href="/signout#">Sign Out</a>
                                 </li>
