@@ -27,7 +27,6 @@ function Signout() {
   //   history.push('/signin');
   // }
 
-
   return (
     <>
       <button className='btn btn-info' onClick={doSignOut}>Sign Out</button>

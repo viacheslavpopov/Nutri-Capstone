@@ -10,7 +10,6 @@ import { firestoreReducer } from 'redux-firestore';
 import loginReducer from './login-reducer';
 import errorMessageReducer from './error-message-reducer';
 
-
 const rootReducer = combineReducers({
     suppDetailsVisibleOnPage: suppDetailsVisibleReducer,
     suppListVisibleOnPage: suppListVisibleReducer,
