@@ -1,8 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { logo } from './../img/images';
-// import { FaAlignRight } from 'react-icons/fa';
-// import './App.css';
 
 function NavBar() {
 
