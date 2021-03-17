@@ -9,6 +9,16 @@ import { withFirestore, isLoaded } from 'react-redux-firebase';
 
 class SupplementControl extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            loginError: null,
+            errorDisplay: false
+        };
+        // if I have loggedIn in local state, NavBar needs to be a child component to pass as prop
+        // unless, I move the render of the navbar, or take the login button out of the navbar entirely.
+    }
+
     handleSelectMalady = (maladyType, maladyName) => {
         const { dispatch } = this.props;
         const action = a.toggleMal();
@@ -29,6 +39,19 @@ class SupplementControl extends React.Component {
         dispatch(action2);
         console.log("hello");
     }
+
+    handleDisplayLoginError = () => {
+        if (this.state.errorMessage != null) {
+            this.setState({
+                errorDisplay: true
+            });
+        }
+    }
+
+    // handleAddSuppToUser = () => {
+    //     const user = firebase.auth().currentUser.userId;
+    //     // const userId = user.userId;
+    // }
 
     render() {
         let currentVisibleState = null;
