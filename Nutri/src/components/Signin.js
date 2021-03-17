@@ -1,14 +1,14 @@
 import firebase from 'firebase/app';
 import React from 'react';
 import { useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import * as a from './../actions';
 
 function Signin() {
 
   const history = useHistory();
   const dispatch = useDispatch();
-  // const errorMessage = useSelector(state => state.errorMessage); // accesses stat at this point only, does not refresh. Need to use local state?
+  // const errorMessage = useSelector(state => state.errorMessage); // accesses state at this point only, does not refresh. Need to use local state?
   let errorMessage = null;
 
   function doSignIn(e) {
