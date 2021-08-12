@@ -53,7 +53,7 @@ No known bugs at this time.
   <tr>
     <td>1</td>
     <td>As a user, I want to click on a malody from a list to see related supplements.</td>
-    <td>False</td>
+    <td>True</td>
   </tr>
 </table>
 <br>
