@@ -3,8 +3,6 @@
 #### Capstone Project
 #### Created 02.26.2021 | Last Updated 02.26.2021
 
-#### **By Chelsea Becker**
-
 ## 📊Project Overview
 
 ### **Description**
@@ -66,17 +64,16 @@ To open the project on your local machine, you will need to download and install
 
 ### **Clone**
 1. Follow above steps to install necessary software.
-2. Open web browser and go to https://github.com/cschweig2/Nutri-Capstone.
+2. Open web browser.
 3. After clicking the green "code" button, you can copy the URL for the repository.
 4. Open a terminal window, such as Command Prompt or Git Bash, and navigate to the folder you wish to keep this project in.<br>
-  4a. Type in this command: `git clone` , followed by the URL you just copied. The full command should look like this: `git clone https://github.com/cschweig2/Nutri-Capstone` .
+  4a. Type in this command: `git clone` , followed by the URL you just copied. The full command should look like this: `git clone https://github.com/cschwe/Nutri-Capstone` .
 5. View the code on your favorite text editor.
 
 ### **Download**
-1. Click [here](https://github.com/cschweig2/Nutri-Capstone) to view project repository.
-2. Click "Clone or download" to find the "Download ZIP" option.
-3. Click "Download ZIP" and extract files.
-4. Open the project in a text editor by clicking on any file in the project folder.
+1. Click "Clone or download" to find the "Download ZIP" option.
+2. Click "Download ZIP" and extract files.
+3. Open the project in a text editor by clicking on any file in the project folder.
 
 ## 🔌Installation Requirements for React/Redux - Follow First
 
@@ -287,27 +284,3 @@ https://localhost:5000/api/1.0/supplements/?type=herb
 </details>
 
 -------------------------------------------
-## 📧Support and contact details
-
-If you run into any issues, you can contact the creator at chelraebecker@gmail.com, or make contributions to the code on GitHub via forking and creating a new branch.
-
-## 📝Contributors
-
-<table>
-  <tr>
-    <th>Author</th>
-    <th>GitHub Profile</th>
-    <th>Contact Email</th>
-  </tr>
-  <tr>
-    <td>Chelsea Becker</td>
-    <td>https://github.com/cschweig2</td>
-    <td>chelraebecker@gmail.com</td>
-  </tr>
-</table>
-
-## 🧐Legal
-
-*This software is licensed under the MIT license.*
-
-Copyright (c) 2021 **Chelsea Becker**
